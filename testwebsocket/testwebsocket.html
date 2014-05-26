@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<title>Test WebSocket</title>
+<script type="text/javascript">
+var ws = new WebSocket('ws://192.168.11.10:8888/');
+
+function testsend() {
+	ws.send(sendmsg.value);
+	sendmsg.value = '';
+}
+
+</script>
+<body>
+<h1>Test WebSocket</h1>
+Send:
+<input type="text" id="sendmsg" />
+<button id="sendbtn" onclick="testsend();"> Send </button>
+</body>
+</head>
+</html>
